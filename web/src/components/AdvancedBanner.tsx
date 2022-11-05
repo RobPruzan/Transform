@@ -8,7 +8,7 @@ export type Props = {
 
 const AdvancedBannerTop = ({ content }: Props) => {
   const background: BannerLayer = {
-    image: "https://wallpaperaccess.com/full/2802541.png",
+    image: "../assets/background.png",
     translateY: [0, 50],
     opacity: [1, 0.3],
     scale: [1.05, 1, "easeOutCubic"],
