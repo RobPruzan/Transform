@@ -9,30 +9,37 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Layout";
+import Programming from "./components/Programming";
 
 const App = () => {
   const [djangoData, setDjangoData] = useState<string>("");
 
-  useEffect(() => {
-    axios
-      .get("http://localhost:8000")
-      .then((res) => setDjangoData(String(res.data)))
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .post("http://localhost:8000/api/gpt3", {
+  //       prompt: "Write a python script to add 2 numbers",
+  //     })
+  //     .then((res) => {
+  //       setDjangoData(String(res.data));
+  //       console.log(res.data);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, []);
   return (
     <>
-      <Navbar bg="light" expand="lg" fixed="top">
+      <Navbar
+        className="justify-content-end"
+        bg="light"
+        expand="lg"
+        fixed="top"
+      >
         <Container>
-          <img
-            style={{ width: "42px", height: "42px", padding: "8px" }}
-            src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/pencil_270f-fe0f.png"
-          ></img>
           <Navbar.Brand href="/">Transform</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="justify-content-end">
               <Nav.Link href="explore">Explore</Nav.Link>
-              <Nav.Link href="#link">Tutorial</Nav.Link>
+              <Nav.Link href="programming">penis</Nav.Link>
               <NavDropdown title="Extra" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">
                   How we did it
@@ -49,6 +56,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="programming" element={<Programming />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -1,10 +1,18 @@
 html,
 body {
-  padding: 0;
+  padding: 50px;
   margin: 0;
   height: 200vh;
   /* background: #000; */
 }
+/* Make the background the picture in src/assets/Group-5.png of body */
+/* body {
+  background-image: url("assets/Group-5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
 
 .headline {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
