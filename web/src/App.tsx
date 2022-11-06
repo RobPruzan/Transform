@@ -10,6 +10,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Layout";
 
+
 import Programming from "./components/Programming/Programming";
 import Technologies from "./components/Technologies";
 import Form from "react-bootstrap/Form";
@@ -24,20 +25,18 @@ import { NavbarBrand } from "react-bootstrap";
 import { Button, Icon } from "semantic-ui-react";
 
 
+import AboutUS from "./components/AboutUS";
+
+
+
 const App = () => {
   const [djangoData, setDjangoData] = useState<string>("");
-
-  // useEffect(() => {
-  //   axios
-  //     .post("http://localhost:8000/api/gpt3", {
-  //       prompt: "Write a python script to add 2 numbers",
-  //     })
-  //     .then((res) => {
-  //       setDjangoData(String(res.data));
-  //       console.log(res.data);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, []);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000")
+      .then((res) => setDjangoData(String(res.data)))
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <>
       <Navbar
@@ -69,7 +68,7 @@ const App = () => {
                 <NavDropdown.Item href="technologies">
                   Technologies
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">About us</NavDropdown.Item>
+                <NavDropdown.Item href="AboutUS">About us</NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Form className="d-flex">
@@ -90,6 +89,7 @@ const App = () => {
           <Route path="programming" element={<Programming />} />
           <Route path="finance" element={<Finance />} />
           <Route path="technologies" element={<Technologies />} />
+          <Route path = "/AboutUS" element = {<AboutUS/>} />
           <Route path="art" element={<Art />} />
 
         </Routes>

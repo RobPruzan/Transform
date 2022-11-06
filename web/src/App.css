@@ -2,6 +2,7 @@
   font-family: Montserrat Subrayada;
   src: url('Font/MontserratSubrayada-Regular.ttf')
 }
+
 .bg-myNav{
   background-color: white;
 }
@@ -30,9 +31,9 @@
 }
 html,
 body {
-  padding: 50px;
-  margin: 0;
-  height: 200vh;
+  padding: 0px;
+  margin: 125px 0 0 0;
+  height: 100vh;
   /* background: #000; */
 }
 /* Make the background the picture in src/assets/Group-5.png of body */
@@ -98,6 +99,76 @@ body {
   background-color: yellow;
 }
 
+.page{
+  height: 100px;
+}
+
+
+#heading {
+  margin: 0 10px 0 0;
+  color: #687CC6;
+  size: 30px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #687CC6;
+  box-shadow: center;
+  height: 150px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.552);
+  height: 100px;
+  margin: 20px 20px 20px 10px;
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  object-fit: fit;
+  border-radius: 50%;
+  margin: 20px auto 20px auto;
+  display: block;
+}
+
+.card h2 {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.card p {
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.card a {
+  color: rgb(0, 0, 0);
+  padding: 0 0;
+  display: block;
+  text-align: center;
+  margin: 20px 50px;
+  font-size: 12px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 1s ease;
+}
+
+.center-full {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 100px;
+  background-color: #687CC6;
+  color: white;
+}
 
 /* center a div called center */
 .center {
@@ -187,18 +258,67 @@ body {
 
 
 
+.headline {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: left;
+  color: rgb(247, 247, 247);
+  font-size: 60px;
+}
 
-.settings {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 300px;
+.head {
+  margin: 0 0 0 0;
+}
+
+.brain {
+  margin: -200px 0 0 75%;
+}
+
+.ai {
+  margin: 0px 0 0 0;
+  font-size: 20px;
+}
+
+.container2 {
+  display: flex;
+  margin: -100px 0 100px 6.5%;
+}
+
+.class_card {
+  background: #687CC6;
+  box-shadow: center;
+  width: 280px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.552);
   height: 300px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  transition: all 0.5s ease;
-  display: inline-block;
+  margin: 20px 40px 20px 10px;
+  border-radius: 20px;
+}
+
+.class_name {
+  margin: 15px 0 0 0;
+  color: white;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.class_card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  height: 50%;
+  width: 50%;
+}
+
+.transform {
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+}
+
+.class_card:hover {
+  cursor: pointer;
+  /* transform: scale(1.05); */
+  margin: 0px 40px 20px 10px;
+  transition: 0.25s ease;
 }
 
