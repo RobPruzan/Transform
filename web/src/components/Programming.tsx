@@ -1,5 +1,5 @@
 import { SetStateAction, useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Form, InputGroup } from "react-bootstrap";
 import gpt3Get from "../connection/api";
 import Settings from "./Settings";
 
@@ -20,10 +20,17 @@ const Programming = () => {
   return (
     <>
       <div>
-        <input type="text" onChange={changeHandler} />
+      <InputGroup className="mb-3">
+        <Form.Control
+          placeholder="Enter Text Here"
+          aria-label="Enter Text Here"
+          aria-describedby="basic-addon2"
+        />
         <Button onClick={clickHandler} color="primary">
           Submit
         </Button>
+      </InputGroup>
+
       </div>
 
       <textarea rows={10} cols={50} value={gpt3Response} disabled={true}>

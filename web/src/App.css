@@ -1,3 +1,28 @@
+@font-face {
+  font-family: Montserrat Subrayada;
+  src: url('Font/MontserratSubrayada-Regular.ttf')
+}
+
+.bg-myNav{
+  background-color: white;
+}
+.navbar{
+  color: #687CC6;
+}
+.into{
+  color: #687CC6
+}
+
+.nav-link {
+  margin-right: 16px;
+  margin-left: 15px;
+  font-family: Montserrat Subrayada;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #687CC6;
+}
+
 html,
 body {
   padding: 50px;
