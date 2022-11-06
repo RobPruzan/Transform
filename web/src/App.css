@@ -2,7 +2,6 @@
   font-family: Montserrat Subrayada;
   src: url('Font/MontserratSubrayada-Regular.ttf')
 }
-
 .bg-myNav{
   background-color: white;
 }
@@ -12,9 +11,8 @@
 .into{
   color: #687CC6
 }
-
 .nav-link {
-  margin-right: 16px;
+  margin-right: 15px;
   margin-left: 15px;
   font-family: Montserrat Subrayada;
 }
@@ -23,6 +21,13 @@
   color: #687CC6;
 }
 
+.financeTxt{
+  font-size: large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.setting{
+  font-family:monospace
+}
 html,
 body {
   padding: 50px;
