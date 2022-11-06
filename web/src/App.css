@@ -93,5 +93,51 @@ body {
   transform-style: preserve-3d;
   perspective: 1000px;
 }
+/* for a css class called code-explain, onHover, hightline the text in yellow */
+.code-explain:hover {
+  background-color: yellow;
+}
 
 
+/* center a div called center */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Making a css selector for a div called settings-fixed which will be an expandle settings section which will be locked to the bottom-right of the screen, make the element collapsible on click */
+/* It collapses expands/ collapses with animations */
+/* .settings-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  display: inline-block;
+}
+/* inline the elements in this selector and space them by 20px*/
+.translate-buttons > * {
+  display: inline-block;
+  margin: 15px;
+} */
+
+/* a css selector  called settings that is called settings which is fixed to the bottom of the page*/
+.settings {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: all 0.5s ease;
+  display: inline-block;
+}

@@ -1,3 +1,12 @@
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardText,
+  MDBCardTitle,
+  MDBCol,
+  MDBRow,
+} from "mdb-react-ui-kit";
 import { ParallaxBanner } from "react-scroll-parallax";
 import { BannerLayer } from "react-scroll-parallax/dist/components/ParallaxBanner/types";
 // import "../background.png";
@@ -22,8 +31,77 @@ const AdvancedBannerTop = ({ content }: Props) => {
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      <div className="inset center">
-        <h1 color="white">Get back to your world. Fast.</h1>
+      <div style={{ margin: "100px" }} className="inset center">
+        <MDBRow className="row-cols-1 row-cols-md-3 g-4">
+          <MDBCol>
+            <MDBCard>
+              <MDBCardImage
+                src="https://mdbootstrap.com/img/new/standard/city/041.webp"
+                alt="..."
+                position="top"
+              />
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </MDBCardText>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol>
+            <MDBCard>
+              <MDBCardImage
+                src="https://mdbootstrap.com/img/new/standard/city/042.webp"
+                alt="..."
+                position="top"
+              />
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </MDBCardText>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol>
+            <MDBCard>
+              <MDBCardImage
+                src="https://mdbootstrap.com/img/new/standard/city/043.webp"
+                alt="..."
+                position="top"
+              />
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </MDBCardText>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol>
+            <MDBCard>
+              <MDBCardImage
+                src="https://mdbootstrap.com/img/new/standard/city/044.webp"
+                alt="..."
+                position="top"
+              />
+              <MDBCardBody>
+                <MDBCardTitle>Card title</MDBCardTitle>
+                <MDBCardText>
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </MDBCardText>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+        </MDBRow>
       </div>
     ),
   };

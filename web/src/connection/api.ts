@@ -10,10 +10,14 @@ import axios from "axios";
 //       .catch((err) => console.log(err));
 
 const gpt3Get = async (prompt: string) => {
+  console.log('gpt3Get');
   const response = await axios.post("http://localhost:8000/api/gpt3", {
     prompt: prompt,
   });
+  console.log('wooo', response)
   return response;
 }
+
+
 
 export default gpt3Get;
