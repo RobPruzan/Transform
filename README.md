@@ -1,5 +1,5 @@
 # Hackathon
-Everything you need to start up your project :)
+Trasnforming your education using state-of-the-art models
 
 Python
 ```
