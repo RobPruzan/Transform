@@ -57,12 +57,12 @@ class DalleView(generics.CreateAPIView):
         return Response()
 
 
-    def dalle2(self, response):
-        openai.api_key = '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'
+    def dalle2(self, prompt):
+        openai.api_key = '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'
         response = openai.Image.create(
-         prompt="a white siamese cat",
+         prompt=prompt,
         n=1,
-        size="1024x1024"
+        size="512x512"
         )
         image_url = response['data'][0]['url']
         print(image_url)

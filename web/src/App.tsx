@@ -55,9 +55,13 @@ const App = () => {
               <Nav.Link href="art">Art</Nav.Link>
               <Nav.Link href="finance">Finance</Nav.Link>
               <Nav.Link href="programming">Programming</Nav.Link>
-              <Nav.Link href="math">Math</Nav.Link>
 
-              <NavDropdown title="Extra" id="basic-nav-dropdown">
+              <NavDropdown
+                style={{ height: "-500px" }}
+                className="ms-auto"
+                title="Extra"
+                id="basic-nav-dropdown"
+              >
                 <NavDropdown.Item href="technologies">
                   Technologies
                 </NavDropdown.Item>
