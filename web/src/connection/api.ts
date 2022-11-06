@@ -19,16 +19,22 @@ const gpt3Get = async (prompt: string) => {
 }
 
 
-export const dallePost =async (file:FileList  ) => {
-  console.log('file:', file[0])
-  const kms = new FormData()
-  kms.append('thing', file[0])
-  const response = await axios.post("http://localhost:8000/api/dalle", {
-    file: kms
-  });
-  return response
+// export const dallePost =async (file:FileList  ) => {
+//   console.log('file:', file[0])
+//   const kms = new FormData()
+//   kms.append('thing', file[0])
+//   const response = await axios.post("http://localhost:8000/api/dalle", {
+//     file: kms
+//   });
+//   return response
   
+// }
+
+export const dalleGet = async (prompt:string) => {
+  const response = await axios.post("http://localhost:8000/api/dalle", prompt);
+  return response
 }
+
 
 
 export default gpt3Get;

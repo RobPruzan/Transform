@@ -36,7 +36,7 @@ class Gpt3View(generics.CreateAPIView):
         return Response(output)
     # serializer_class = Gpt3Serializer
     def gpt3(self, stext, model='text-davinci-002', temp=.7):
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.Completion.create(
             engine = model,
             prompt=stext,
@@ -57,12 +57,12 @@ class DalleView(generics.CreateAPIView):
         return Response()
 
 
-    def dalle2(self, response):
-        openai.api_key = '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'
+    def dalle2(self, prompt):
+        openai.api_key = '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'
         response = openai.Image.create(
-         prompt="a white siamese cat",
+         prompt=prompt,
         n=1,
-        size="1024x1024"
+        size="512x512"
         )
         image_url = response['data'][0]['url']
         print(image_url)
