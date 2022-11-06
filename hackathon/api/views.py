@@ -51,6 +51,22 @@ class Gpt3View(generics.CreateAPIView):
         content = response.choices[0].text.split(',')
         ans = response.choices[0].text
         return ans
+class DalleView(generics.CreateAPIView):
+    def post(self, request):
+        print('please good lord',request.data)
+        return Response()
+
+
+    def dalle2(self, response):
+        openai.api_key = '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'
+        response = openai.Image.create(
+         prompt="a white siamese cat",
+        n=1,
+        size="1024x1024"
+        )
+        image_url = response['data'][0]['url']
+        print(image_url)
+        return image_url
     # def post(self, request):
     #     prompt = request.data.get('prompt')
     #     user = request.data.get('user')

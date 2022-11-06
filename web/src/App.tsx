@@ -14,8 +14,15 @@ import Programming from "./components/Programming/Programming";
 import Technologies from "./components/Technologies";
 import Form from "react-bootstrap/Form";
 import Finance from "./components/Finance";
+
+
+
+
+import Art from "./components/Art";
+
 import { NavbarBrand } from "react-bootstrap";
 import { Button, Icon } from "semantic-ui-react";
+
 
 const App = () => {
   const [djangoData, setDjangoData] = useState<string>("");
@@ -83,6 +90,8 @@ const App = () => {
           <Route path="programming" element={<Programming />} />
           <Route path="finance" element={<Finance />} />
           <Route path="technologies" element={<Technologies />} />
+          <Route path="art" element={<Art />} />
+
         </Routes>
       </BrowserRouter>
     </>

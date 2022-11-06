@@ -127,7 +127,67 @@ body {
   margin: 15px;
 } */
 
-/* a css selector  called settings that is called settings which is fixed to the bottom of the page*/
+
+.longtext {
+  margin: 25px 0 0 -250px;
+  width: 800px;
+  height:35px;
+  border-radius: 5px 5px 5px 5px;
+  border-width: 1;
+  outline-color: gray;
+  box-shadow:  2px 1px 0 1px rgba(0, 0, 0, 0.2)
+ 
+}
+
+.dropdown {
+  margin: -20px 0 0 290px;
+  color: #6F8DF5;
+
+}
+
+.card1 {
+  background-color: white;
+  height: 600px;
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.552);
+  margin: 50px 0 0 -250px;
+  
+  
+}
+
+.card2 {
+  background-color: white;
+  height: 600px;
+  width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.552);
+  margin: -600px 0 0 650px;
+}
+.card3 {
+  background-color: white;
+  height: 50px;
+  width: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.552);
+  margin: -140px 0 0 438px;
+}
+.artContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  margin: 0 0 -1200px 450px;
+}
+.button2 {
+  margin: 0 0 0 20px;
+}
+.picture {
+  height: 600px;
+  width: 600px;
+}
+
+
+
+
 .settings {
   position: fixed;
   bottom: 0;
@@ -141,3 +201,4 @@ body {
   transition: all 0.5s ease;
   display: inline-block;
 }
+
