@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export type Gpt3Settings = {
   temperature: number;
   maxLength: number;
@@ -10,6 +10,9 @@ const Settings = () => {
     maxLength: 20,
     model: "davinci-2",
   });
+  useEffect(() => {
+    console.log(settings);
+  });
 
   return (
     <div className="settings">
@@ -18,6 +21,9 @@ const Settings = () => {
         <div>
           <label htmlFor="temperature">Temperature</label>
           <input
+            step={0.01}
+            min={0}
+            max={1}
             className="form-control"
             type="number"
             id="temperature"
@@ -33,6 +39,9 @@ const Settings = () => {
         <div>
           <label htmlFor="maxLength">Max Length</label>
           <input
+            max={4000}
+            min={500}
+            defaultValue={500}
             className="form-control"
             type="number"
             id="maxLength"
@@ -52,8 +61,8 @@ const Settings = () => {
               setSettings({ ...settings, model: e.target.value })
             }
           >
-            <option value="davinci-2">Davinci 2</option>
-            <option value="davinci-2">Davinci 2</option>
+            <option value="text-davinci-002">text-davinci-2</option>
+            <option value="text-curie-001">Davinci 2</option>
             <option value="davinci-2">Davinci 2</option>
           </select>
         </div>

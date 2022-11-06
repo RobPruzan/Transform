@@ -12,14 +12,16 @@ export const CODE_CHARS = 55;
 const Programming = () => {
   const [displayedCode, setDisplayedCode] = useState<string[]>([""]);
   const [whichTab, setWhichTab] = useState<WhichTab>("1");
-
+  useEffect(() => {
+    console.log("whichTab");
+  });
   return (
     <>
       <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
         <Tab eventKey={1} title="Code Translation">
           <Translation />
         </Tab>
-        <Tab eventKey={2} title="Tab 2">
+        <Tab eventKey={2} title="Explanation">
           <Explanation />
         </Tab>
         <Tab eventKey={3} title="Settings">
