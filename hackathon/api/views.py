@@ -1,4 +1,5 @@
 import openai
+from towhee import pipeline
 
 from rest_framework import generics
 from django.shortcuts import render
@@ -7,6 +8,9 @@ from .serializers import UserSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import UserSerializer, Gpt3Serializer
+import numpy as np
+from numpy import dot
+from numpy.linalg import norm
 
 # Create your views here.
 class UserView(generics.CreateAPIView):
@@ -28,10 +32,11 @@ class Gpt3View(generics.CreateAPIView):
     def post(self, request):
         prompt = request.data.get('prompt')
         output = self.gpt3(prompt)
+        print(output)
         return Response(output)
     # serializer_class = Gpt3Serializer
     def gpt3(self, stext, model='text-davinci-002', temp=.7):
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.Completion.create(
             engine = model,
             prompt=stext,
@@ -53,4 +58,25 @@ class Gpt3View(generics.CreateAPIView):
     #     print('TESJKFHSJKDAJFHASKJFDJHKASKJHDFHJKASDFKHJKASJDHF',output)
     #     answer = Gpt3History.objects.create(user=user, prompt=prompt, output=output)
     #     # return Response(self.get_serializer(answer).data)
+
+class PromptView(generics.CreateAPIView):
+    def get(self, request):
+        prompts = {
+
+        }
+        return Response("THIS IS A TEST")
+    
+    
+    
         
+
+class ImageSimilarityView(generics.CreateAPIView):
+    def cosine_sim(self, A, B):
+        return np.dot(A,B).reshape(1, -1)/(norm(A)*norm(B)).reshape(1, -1)
+
+    def please(self, image1, image2):
+        embedding_pipeline = pipeline('towhee/image-embedding-resnet50', install_reqs=False) 
+        embedding1 = embedding_pipeline(image1)
+
+        embedding2 = embedding_pipeline(image2)
+        return 1 - self.cosine_sim(embedding1, embedding2)

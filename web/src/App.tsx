@@ -9,14 +9,13 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./components/Layout";
+
 import Programming from "./components/Programming";
 import Technologies from "./components/Technologies";
-
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Finance from "./components/Finance";
-
-
+import { NavbarBrand } from "react-bootstrap";
+import { Button, Icon } from "semantic-ui-react";
 
 
 const App = () => {

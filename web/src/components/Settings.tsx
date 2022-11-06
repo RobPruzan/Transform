@@ -12,44 +12,51 @@ const Settings = () => {
   });
 
   return (
-    <div>
-      <h1>Settings</h1>
-      <div>
-        <label htmlFor="temperature">Temperature</label>
-        <input
-          type="number"
-          id="temperature"
-          value={settings.temperature}
-          onChange={(e) =>
-            setSettings({
-              ...settings,
-              temperature: parseFloat(e.target.value),
-            })
-          }
-        />
-      </div>
-      <div>
-        <label htmlFor="maxLength">Max Length</label>
-        <input
-          type="number"
-          id="maxLength"
-          value={settings.maxLength}
-          onChange={(e) =>
-            setSettings({ ...settings, maxLength: parseInt(e.target.value) })
-          }
-        />
-      </div>
-      <div>
-        <label htmlFor="model">Model</label>
-        <select
-          id="model"
-          value={settings.model}
-          onChange={(e) => setSettings({ ...settings, model: e.target.value })}
-        >
-          <option value="davinci-2">Davinci 2</option>
-          <option value="davinci-2">Davinci 2</option>
-          <option value="davinci-2">Davinci 2</option>
-        </select>
+    <div className="settings">
+      <div className="form-control">
+        <h1>Settings</h1>
+        <div>
+          <label htmlFor="temperature">Temperature</label>
+          <input
+            className="form-control"
+            type="number"
+            id="temperature"
+            value={settings.temperature}
+            onChange={(e) =>
+              setSettings({
+                ...settings,
+                temperature: parseFloat(e.target.value),
+              })
+            }
+          />
+        </div>
+        <div>
+          <label htmlFor="maxLength">Max Length</label>
+          <input
+            className="form-control"
+            type="number"
+            id="maxLength"
+            value={settings.maxLength}
+            onChange={(e) =>
+              setSettings({ ...settings, maxLength: parseInt(e.target.value) })
+            }
+          />
+        </div>
+        <div>
+          <label htmlFor="model">Model</label>
+          <select
+            className="form-control"
+            id="model"
+            value={settings.model}
+            onChange={(e) =>
+              setSettings({ ...settings, model: e.target.value })
+            }
+          >
+            <option value="davinci-2">Davinci 2</option>
+            <option value="davinci-2">Davinci 2</option>
+            <option value="davinci-2">Davinci 2</option>
+          </select>
+        </div>
       </div>
     </div>
   );
