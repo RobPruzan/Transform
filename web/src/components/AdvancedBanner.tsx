@@ -9,7 +9,7 @@ export type Props = {
 const AdvancedBannerTop = ({ content }: Props) => {
   const background: BannerLayer = {
     image:
-      "https://img.freepik.com/free-vector/ocean-sea-waves-ripples-water-background_1017-37268.jpg?w=2000&t=st=1667679183~exp=1667679783~hmac=dc692c68db1c510c918d21967ec4faebe1d9de766f22931ebd7b893297fd4721",
+      "https://cdn.pixabay.com/photo/2018/01/04/20/52/wave-3061611_1280.png",
     translateY: [0, 50],
     opacity: [1, 0.3],
     scale: [1.05, 1, "easeOutCubic"],
