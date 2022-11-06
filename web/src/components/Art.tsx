@@ -6,27 +6,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { dallePost } from '../connection/api';
 
 const Art = () => {
-    const [file, setFile] = useState<FormData>()
-    const [toggle, setToggle] = useState<boolean>(false)
-    useEffect(() => {
-        // console.log('here')
-        // if (file) {
-        //     dallePost(file)
-        // }
-       
-    }, [toggle])
     
     return (
         <>
-        
         <p  style={{fontSize:30, zIndex:20, margin: "-25px", left: "5%", position: "absolute"}}>What would you like to draw? </p>
         <div className="artContainer">  
         <section className="container">
         <input className= "longtext" type = "text"></input>   
 
-        <Button onClick={() => {
-            setToggle(!toggle)
-        }}/>
         <Dropdown>
         <Dropdown.Toggle color="blue" id="dropdown-basic" className ="dropdown">
         Art Style
@@ -58,38 +45,18 @@ const Art = () => {
         </Col>
         <Col>
         <div className="card2">"
-        <Form.Group  controlId="formFile" className="mb-3">
-        <Form.Group controlId="formFile" className="mb-3">
-        <Form.Label>Enter File</Form.Label>
-        <Form.Control type="file" />
-      </Form.Group>
-      
-      
-        {/* <Form.Control onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-            console.log('dsfsdfsdfsfsf',event.target.files)
-            if (event.target.files){
-                // const awgeez = URL.createObjectURL(event.target.files[0])
-                console.log('do something')
-                const files = Array.from(event.target.files)
-                const formData = new FormData()
-                formData.append('image',files[0])
-                // files.forEach((file ,i) => {
-                //     formData.append(String(i), file)
-                // })
-                setFile(formData)
-                console.log('formd data :(',formData)
-                dallePost(formData)
-                // console.log('ds',awgeez)
-            }
-           
-        }} type="file" /> */}
+            <Form.Group  controlId="formFile" className="mb-3">
+            <Form.Group controlId="formFile" className="mb-3">
+            <Form.Label>Enter File</Form.Label>
+            <Form.Control type="file" />
         </Form.Group>
-        </div>
-        </Col>
-      </Row>
-      <div className="card3"></div>
-    </Container>   
-        </>
-    )
-}
+            </Form.Group>
+            </div>
+            </Col>
+        </Row>
+        <div className="card3"></div>
+        </Container>   
+            </>
+        )
+    }
 export default Art;
