@@ -1,4 +1,6 @@
 django
 djangorestframework
 django-cors-headers
+numpy
 openai
+towhee
