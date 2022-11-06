@@ -36,7 +36,7 @@ class Gpt3View(generics.CreateAPIView):
         return Response(output)
     # serializer_class = Gpt3Serializer
     def gpt3(self, stext, model='text-davinci-002', temp=.7):
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.Completion.create(
             engine = model,
             prompt=stext,
