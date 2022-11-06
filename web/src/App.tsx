@@ -18,6 +18,7 @@ import Finance from "./components/Finance";
 
 
 
+import Art from "./components/Art";
 
 const App = () => {
   const [djangoData, setDjangoData] = useState<string>("");
@@ -79,6 +80,7 @@ const App = () => {
           <Route path="finance" element={<Finance />} />
           <Route path="technologies" element={<Technologies />} />
 
+          <Route path="art" element={<Art />} />
         </Routes>
       </BrowserRouter>
 
