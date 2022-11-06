@@ -2,6 +2,7 @@
   font-family: Montserrat Subrayada;
   src: url('Font/MontserratSubrayada-Regular.ttf')
 }
+
 .bg-myNav{
   background-color: white;
 }
@@ -31,7 +32,7 @@
 html,
 body {
   padding: 0px;
-  margin: 0;
+  margin: 125px 0 0 0;
   height: 100vh;
   /* background: #000; */
 }
