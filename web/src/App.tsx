@@ -10,24 +10,17 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Layout";
 
-
 import Programming from "./components/Programming/Programming";
 import Technologies from "./components/Technologies";
 import Form from "react-bootstrap/Form";
 import Finance from "./components/Finance";
-
-
-
 
 import Art from "./components/Art";
 
 import { NavbarBrand } from "react-bootstrap";
 import { Button, Icon } from "semantic-ui-react";
 
-
 import AboutUS from "./components/AboutUS";
-
-
 
 const App = () => {
   const [djangoData, setDjangoData] = useState<string>("");
@@ -71,15 +64,6 @@ const App = () => {
                 <NavDropdown.Item href="AboutUS">About us</NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2 .input_box "
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -89,9 +73,8 @@ const App = () => {
           <Route path="programming" element={<Programming />} />
           <Route path="finance" element={<Finance />} />
           <Route path="technologies" element={<Technologies />} />
-          <Route path = "/AboutUS" element = {<AboutUS/>} />
+          <Route path="/AboutUS" element={<AboutUS />} />
           <Route path="art" element={<Art />} />
-
         </Routes>
       </BrowserRouter>
     </>
